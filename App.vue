@@ -2,7 +2,7 @@
 
 <script>
 	import { useMusicStore, useStatusStore, useSettingStore } from "@/stores";
-	import { init } from '@/utils/init';
+	import init  from '@/utils/init';
 	
 	const musicStore = useMusicStore();
 	const statusStore = useStatusStore();

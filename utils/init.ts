@@ -3,12 +3,13 @@ import { useEventListener } from "@vueuse/core";
 import { openUserAgreement } from "@/utils/modal";
 import { debounce } from "lodash-es";
 import { isElectron } from "./helper";
-import packageJson from "@/../package.json";
+import packageJson from "@/package.json";
 import player from "@/utils/player";
 import log from "./log";
 
 // 应用初始化时需要执行的操作
 const init = async () => {
+	console.log('Initializing the application...');
   // init pinia-data
   const dataStore = useDataStore();
   const statusStore = useStatusStore();
@@ -22,9 +23,11 @@ const init = async () => {
 
   // 事件监听
   initEventListener();
-
+// 加载数据
+  console.log('Loading data...');
   // 加载数据
   await dataStore.loadData();
+  console.log('Data loaded.');
   // 初始化播放器
   player.initPlayer(
     settingStore.autoPlay,
@@ -43,6 +46,7 @@ const init = async () => {
     // 检查更新
     if (settingStore.checkUpdateOnStart) window.electron.ipcRenderer.send("check-update");
   }
+  console.log('Application initialized.');
 };
 
 // 事件监听

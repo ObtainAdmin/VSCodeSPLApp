@@ -1,4 +1,4 @@
-import App from './App'
+import App from './App.vue'
 // router
 import router from "@/router";
 // 自定义指令
