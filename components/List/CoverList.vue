@@ -16,7 +16,7 @@
                   type === 'video' ? `${item.cover}?param=464y260` : item.coverSize?.m || item.cover
                 "
                 :default-src="
-                  type !== 'video' ? '/images/album.jpg?assest' : '/images/video.jpg?assest'
+                  type !== 'video' ? '/static/images/album.jpg?assest' : '/static/images/video.jpg?assest'
                 "
                 class="cover-img"
                 once

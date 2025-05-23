@@ -53,7 +53,7 @@
 import type { MenuOption, NScrollbar } from "naive-ui";
 import type { SettingType } from "@/types/main";
 import { isElectron, renderIcon } from "@/utils/helper";
-import packageJson from "@/../package.json";
+import packageJson from "../../package.json";
 
 const props = defineProps<{ type: SettingType }>();
 

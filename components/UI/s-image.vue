@@ -29,7 +29,7 @@ const props = withDefaults(
     alt?: string;
   }>(),
   {
-    defaultSrc: "/images/song.jpg?assest",
+    defaultSrc: "/static/images/song.jpg?assest",
   },
 );
 

@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import type { UpdateInfoType } from "@/types/main";
-import packageJson from "@/../package.json";
+import packageJson from "../../package.json";
 
 defineProps<{ data: UpdateInfoType }>();
 

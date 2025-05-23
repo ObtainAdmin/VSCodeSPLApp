@@ -82,7 +82,7 @@ import type { UpdateLogType } from "@/types/main";
 import { getUpdateLog, isElectron, openLink } from "@/utils/helper";
 import { debounce } from "lodash-es";
 import { useStatusStore } from "@/stores";
-import packageJson from "@/../package.json";
+import packageJson from "../../package.json";
 
 const statusStore = useStatusStore();
 

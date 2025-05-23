@@ -140,7 +140,7 @@ class Player {
   private async getOnlineUrl(id: number): Promise<string | null> {
     const settingStore = useSettingStore();
     const res = await songUrl(id, settingStore.songLevel);
-    console.log(`🌐 ${id} music data:`, res);
+    console.log(` ${id} music data:`, res);
     const songData = res.data?.[0];
     // 是否有播放地址
     if (!songData || !songData?.url) return null;
@@ -472,7 +472,7 @@ class Player {
           musicStore.playSong.cover = blobURL;
         }
       } else {
-        musicStore.playSong.cover = "/images/song.jpg?assest";
+        musicStore.playSong.cover = "/static/images/song.jpg?assest";
       }
       // 获取主色
       this.getCoverColor(musicStore.playSong.cover);
@@ -547,7 +547,7 @@ class Player {
           const unlockUrl = await this.getUnlockSongUrl(playSongData);
           if (unlockUrl) {
             statusStore.playUblock = true;
-            console.log("🎼 Song unlock successfully:", unlockUrl);
+            console.log(" Song unlock successfully:", unlockUrl);
             await this.createPlayer(unlockUrl, autoPlay, seek);
           } else {
             statusStore.playUblock = false;
@@ -1029,9 +1029,9 @@ class Player {
       this.dataArray = new Uint8Array(bufferLength);
       // 更新频谱数据
       this.generateSpectrumData();
-      console.log("🎼 Initialize music spectrum successfully");
+      console.log(" Initialize music spectrum successfully");
     } catch (error) {
-      console.error("🎼 Initialize music spectrum failed:", error);
+      console.error(" Initialize music spectrum failed:", error);
     }
   }
   /**
@@ -1116,7 +1116,7 @@ class Player {
       const getPersonalFmData = async () => {
         const result = await personalFm();
         const songData = formatSongsList(result.data);
-        console.log(`🌐 personal FM:`, songData);
+        console.log(` personal FM:`, songData);
         musicStore.personalFM.list = songData;
         musicStore.personalFM.playIndex = 0;
       };

@@ -180,7 +180,7 @@ const song = toRef(props, "song");
 // 加载本地歌曲封面
 const localCover = async (show: boolean) => {
   if (!isElectron || !show || !song.value.path) return;
-  if (song.value.cover || song.value.cover === "/images/song.jpg?assest") return;
+  if (song.value.cover || song.value.cover === "/static/images/song.jpg?assest") return;
   // 获取封面
   const coverData = await window.electron.ipcRenderer.invoke("get-music-cover", song.value.path);
   if (!coverData) return;

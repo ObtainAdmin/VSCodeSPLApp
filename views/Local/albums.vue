@@ -11,7 +11,7 @@
         <Transition name="fade" mode="out-in">
           <n-image
             :key="item?.[0]?.cover"
-            :src="item?.[0]?.cover || '/images/album.jpg?assest'"
+            :src="item?.[0]?.cover || '/static/images/album.jpg?assest'"
             preview-disabled
             class="cover"
             v-visible.once="(show: boolean) => loadAlbumCover(show, key)"

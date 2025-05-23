@@ -4,7 +4,7 @@
     <img
       v-if="settingStore.playerType === 'record'"
       class="pointer"
-      src="/images/pointer.png?assest"
+      src="/static/images/pointer.png?assest"
       alt="pointer"
     />
     <!-- 专辑图片 -->

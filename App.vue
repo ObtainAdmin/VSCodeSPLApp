@@ -23,7 +23,7 @@
 	});
 </script>
 
-<style>
+<style lang="scss" scoped>
 	/*每个页面公共css */
 	#main {
 		flex: 1;
