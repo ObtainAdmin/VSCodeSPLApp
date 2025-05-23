@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { useStatusStore, useMusicStore } from "@/stores";
-
+import Menu from "./Menu.vue"
 const router = useRouter();
 const musicStore = useMusicStore();
 const statusStore = useStatusStore();

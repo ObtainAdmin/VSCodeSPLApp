@@ -117,6 +117,7 @@
 </template>
 
 <script setup lang="ts">
+import { useElementVisibility } from "@vueuse/core";
 import { isElectron } from "@/utils/helper";
 
 const emit = defineEmits<{

@@ -19,7 +19,7 @@ const svgContainer = ref<HTMLElement | null>(null);
 // 加载图标
 const loadSVG = async (name: string) => {
   try {
-    const svg = await import(`../../assets/static/icons/${name}.svg?raw`);
+    const svg = await import(`../../assets/icons/${name}.svg?raw`);
     svgContent.value = svg.default || svg;
     if (svgContainer.value) svgContainer.value.innerHTML = svgContent.value;
   } catch (error) {

@@ -93,7 +93,7 @@ import type { DropdownOption } from "naive-ui";
 import { useSettingStore } from "@/stores";
 import { isElectron, isDev, renderIcon } from "@/utils/helper";
 import { openSetting } from "@/utils/modal";
-
+import SvgIcon from "../Global/SvgIcon.vue"
 const router = useRouter();
 const settingStore = useSettingStore();
 

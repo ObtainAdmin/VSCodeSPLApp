@@ -21,6 +21,7 @@
       "naive-ui/volar"
     ]
   },
+  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx", "./**/*.vue"],
   "exclude": [
     "node_modules",
     "unpackage",

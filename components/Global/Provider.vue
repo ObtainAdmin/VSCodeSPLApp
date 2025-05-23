@@ -42,6 +42,7 @@ import { useSettingStore, useStatusStore } from "@/stores";
 import { setColorSchemes } from "@/utils/color";
 // import { rgbToHex } from "@imsyy/color-utils";
 import themeColor from "@/assets/data/themeColor.json";
+import { watchDebounced } from "@vueuse/core";
 
 const statusStore = useStatusStore();
 const settingStore = useSettingStore();

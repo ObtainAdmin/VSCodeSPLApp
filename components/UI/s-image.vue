@@ -22,6 +22,8 @@
 </template>
 
 <script setup lang="ts">
+import { useElementVisibility } from '@vueuse/core';
+
 const props = withDefaults(
   defineProps<{
     src: string | undefined;

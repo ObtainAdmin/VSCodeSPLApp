@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import type { LyricLine } from "@applemusic-like-lyrics/core";
-import type { SongType, LyricType } from "@/types/main";
+import type { SongType, LyricType } from "@/types/main.d.ts";
 
 interface MusicState {
   playSong: SongType;
@@ -108,3 +108,4 @@ export const useMusicStore = defineStore("music", {
     storage: localStorage,
   },
 });
+

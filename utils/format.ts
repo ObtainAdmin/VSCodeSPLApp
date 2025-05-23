@@ -77,6 +77,7 @@ export const formatCoverList = (data: any[]): CoverType[] => {
   if (!data) return [];
   data = isArray(data) ? data : [data];
   return data.map((item) => {
+	  if (!item) throw new Error("封面列表数据为空");
     // 处理数据
     const creator = isArray(item.creator) ? item.creator[0] : item.creator;
     // 获取歌手信息
